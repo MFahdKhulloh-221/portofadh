@@ -130,9 +130,9 @@ export default function Home() {
 
 
       {/* HERO SECTION */}
-      <section className="h-screen">
-        <div className="container mx-auto h-full">
-          <div className="grid grid-cols-12 h-full">
+      <section className="h-screen flex items-center">
+        <div className="container mx-auto px-6 md:px-20 h-full">
+          <div className="grid grid-cols-12 h-full items-center">
 
             {/* LEFT */}
             <div className="col-span-6 flex items-center">
@@ -212,7 +212,7 @@ export default function Home() {
       {/* ABOUT SECTION */}
 
       <section className="py-32">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-6 md:px-20">
 
           {/* CARD WRAPPER */}
           <AnimatedContent>
@@ -318,7 +318,7 @@ export default function Home() {
       {/* TOOLS & STACK SECTION */}
 
       <section className="py-32" id="skills">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-6 md:px-20">
 
           <AnimatedContent>
             <div className="text-center mb-16">
@@ -443,30 +443,30 @@ export default function Home() {
       {/* PROJECTS SECTION */}
 
       <section className="py-40" id="projects">
+        <AnimatedContent>
+          <div className="max-w-[1400px] mx-auto px-6">
 
-        <div className="max-w-[1400px] mx-auto px-6">
+            <AnimatedContent>
+              <div className="text-center mb-20">
 
-          <AnimatedContent>
-            <div className="text-center mb-20">
+                <h2 className="text-4xl font-bold text-white">
+                  My <span className="text-[#06D001]">Projects</span>
+                </h2>
 
-              <h2 className="text-4xl font-bold text-white">
-                My <span className="text-[#06D001]">Projects</span>
-              </h2>
+                <p className="text-gray-400 mt-4">
+                  Beberapa project yang pernah saya kerjakan.
+                </p>
 
-              <p className="text-gray-400 mt-4">
-                Beberapa project yang pernah saya kerjakan.
-              </p>
-
-            </div>
-          </AnimatedContent>
+              </div>
+            </AnimatedContent>
 
 
-          {/* GRID */}
+            {/* GRID */}
 
-          <AnimatedContent>
+            <AnimatedContent>
 
-            <div
-              className="
+              <div
+                className="
         grid
         grid-cols-1
         sm:grid-cols-2
@@ -475,13 +475,13 @@ export default function Home() {
         gap-10
         justify-items-center
         "
-            >
+              >
 
-              {items.map((item, index) => (
+                {items.map((item, index) => (
 
-                <div
-                  key={index}
-                  className="
+                  <div
+                    key={index}
+                    className="
             relative
             w-[320px]
             h-[240px]
@@ -491,31 +491,31 @@ export default function Home() {
             overflow-hidden
             rounded-xl
             "
-                >
+                  >
 
-                  <ChromaGrid
-                    items={[item]}
-                    radius={260}
-                    damping={0.45}
-                    fadeOut={0.6}
-                    ease="power3.out"
-                  />
+                    <ChromaGrid
+                      items={[item]}
+                      radius={260}
+                      damping={0.45}
+                      fadeOut={0.6}
+                      ease="power3.out"
+                    />
 
-                </div>
+                  </div>
 
-              ))}
+                ))}
 
-            </div>
+              </div>
 
-          </AnimatedContent>
+            </AnimatedContent>
 
-        </div>
-
+          </div>
+        </AnimatedContent>
       </section>
 
-     
-        <Footer />
-     
+
+      <Footer />
+
 
 
     </div >

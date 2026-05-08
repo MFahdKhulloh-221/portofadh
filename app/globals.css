@@ -167,3 +167,53 @@
     @apply text-gray-500 text-[9px] font-semibold uppercase tracking-[0.2em] mt-1.5;
   }
 }
+
+/* ===== MOBILE RESPONSIVE OVERRIDES ===== */
+
+@media (max-width: 639px) {
+  /* Social media icons — smaller on mobile */
+  .social-media {
+    gap: 12px;
+  }
+
+  .social-media a {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  /* CTA button — compact padding on mobile */
+  .btn-social {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  /* Skill cards — less padding on mobile */
+  .skill-card {
+    padding: 1rem;
+  }
+
+  .skill-card p {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  .skill-card svg,
+  .skill-card img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+}
+
+/* Tablet range polish */
+@media (min-width: 640px) and (max-width: 767px) {
+  .social-media a {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+
+  .skill-card {
+    padding: 1.25rem;
+  }
+}

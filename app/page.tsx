@@ -130,21 +130,21 @@ export default function Home() {
 
 
       {/* HERO SECTION */}
-      <section className="h-screen flex items-center">
-        <div className="container mx-auto px-6 md:px-20 h-full">
-          <div className="grid grid-cols-12 h-full items-center">
+      <section className="min-h-screen flex items-center">
+        <div className="container mx-auto px-4 sm:px-6 md:px-20 w-full">
 
-            {/* LEFT */}
-            <div className="col-span-6 flex items-center">
+          {/* MOBILE: stacked | DESKTOP: side-by-side */}
+          <div className="flex flex-col md:grid md:grid-cols-12 md:h-screen md:items-center gap-0">
 
-              <div className="flex flex-col gap-3 text-left">
+            {/* LEFT — teks */}
+            <div className="md:col-span-6 flex items-center pt-24 pb-4 md:pt-0 md:pb-0">
+              <div className="flex flex-col gap-3 text-left w-full">
 
                 <AnimatedContent>
-                  <div className="flex items-center gap-2 ml-3">
-                    <h1 className="text-2xl text-white font-bold">
+                  <div className="flex flex-wrap items-center gap-2 ml-1 md:ml-3">
+                    <h1 className="text-lg sm:text-xl md:text-2xl text-white font-bold">
                       I'm Ready For Job
                     </h1>
-
                     <RotatingText
                       texts={[
                         "Web Developer",
@@ -152,7 +152,7 @@ export default function Home() {
                         "Mobile Application",
                         "IoT Project",
                       ]}
-                      mainClassName="px-3 bg-[#06D001] text-black py-1 rounded-lg text-2xl font-bold inline-flex"
+                      mainClassName="px-2 sm:px-3 bg-[#06D001] text-black py-1 rounded-lg text-lg sm:text-xl md:text-2xl font-bold inline-flex"
                       rotationInterval={2000}
                     />
                   </div>
@@ -160,12 +160,12 @@ export default function Home() {
 
                 <SplitText
                   text="I'm M. Fadh Khulloh"
-                  className="text-6xl font-semibold text-white -ml-3"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white -ml-1 md:-ml-3"
                 />
 
                 <SplitText
                   text="Full Stack Developer"
-                  className="text-6xl font-semibold text-white"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white"
                 />
 
                 <BlurText
@@ -173,34 +173,33 @@ export default function Home() {
                   delay={70}
                   animateBy="words"
                   direction="top"
-                  className="text-[20px] text-gray-300 max-w-xl"
+                  className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-gray-300 max-w-xl"
                 />
 
                 {/* SOCIAL */}
                 <AnimatedContent>
-
                   <div className="social-media">
-                    <a href="https://www.instagram.com/ffaddhh?igsh=aHByZDNmbWZlcGR1" target="_blank"> <i className="bx bxl-instagram-alt"></i> </a> <a href="https://wa.me/6285194564214" target="_blank"> <i className="bx bxl-whatsapp"></i> </a> <a href="#" target="_blank"> <i className="bx bxl-github"></i> </a> <a href="https://www.tiktok.com/@f.tulo" target="_blank"> <i className="bx bxl-tiktok"></i> </a> </div>
-
+                    <a href="https://www.instagram.com/ffaddhh?igsh=aHByZDNmbWZlcGR1" target="_blank"> <i className="bx bxl-instagram-alt"></i> </a>
+                    <a href="https://wa.me/6285194564214" target="_blank"> <i className="bx bxl-whatsapp"></i> </a>
+                    <a href="#" target="_blank"> <i className="bx bxl-github"></i> </a>
+                    <a href="https://www.tiktok.com/@f.tulo" target="_blank"> <i className="bx bxl-tiktok"></i> </a>
+                  </div>
                 </AnimatedContent>
 
                 {/* BUTTON */}
                 <AnimatedContent>
-                  <div className="mt-4">
-                    <a
-                      href="/CV_IT_fadh.pdf"
-                      target="_blank"
-                      className="btn-social"
-                    >
+                  <div className="mt-2 md:mt-4">
+                    <a href="/CV_IT_fadh.pdf" target="_blank" className="btn-social">
                       Download CV
                     </a>
                   </div>
                 </AnimatedContent>
+
               </div>
             </div>
 
-            {/* RIGHT */}
-            <div className="col-span-6 flex items-center justify-center">
+            {/* RIGHT — Lanyard */}
+            <div className="md:col-span-6 flex items-center justify-center w-full">
               <Lanyard />
             </div>
 
@@ -211,15 +210,15 @@ export default function Home() {
 
       {/* ABOUT SECTION */}
 
-      <section className="py-32">
-        <div className="container mx-auto px-6 md:px-20">
+      <section className="py-16 md:py-32">
+        <div className="container mx-auto px-4 sm:px-6 md:px-20">
 
           {/* CARD WRAPPER */}
           <AnimatedContent>
-            <div className="grid grid-cols-12 gap-10 items-center bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-12">
+            <div className="flex flex-col md:grid md:grid-cols-12 gap-8 md:gap-10 items-center bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 sm:p-8 md:p-12">
 
               {/* LEFT - PROFILE CARD */}
-              <div className="col-span-5 flex justify-center">
+              <div className="w-full md:col-span-5 flex justify-center">
                 <ProfileCard
                   name="M. Fadh K"
                   title="Software Engineer"
@@ -238,49 +237,49 @@ export default function Home() {
               </div>
 
               {/* RIGHT - ABOUT TEXT */}
-              <div className="col-span-7 text-white">
+              <div className="w-full md:col-span-7 text-white">
 
-                <h2 className="text-4xl font-bold mb-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">
                   About Me
                 </h2>
 
-                <p className="text-gray-400 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-4 md:mb-6 text-sm sm:text-base">
                   Saya adalah mahasiswa Teknik Informatika yang memiliki minat besar
                   dalam pengembangan website dan aplikasi digital. Saya terbiasa
                   mengembangkan aplikasi menggunakan teknologi modern seperti
                   JavaScript, React, dan Next.js.
                 </p>
 
-                <p className="text-gray-400 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   Dalam beberapa proyek, saya berperan sebagai full-stack developer
                   yang menangani pengembangan frontend dan backend sekaligus.
                 </p>
 
-                <div className="grid grid-cols-3 gap-8 mt-10 border-t border-white/10 pt-8">
+                <div className="grid grid-cols-3 gap-4 md:gap-8 mt-8 md:mt-10 border-t border-white/10 pt-6 md:pt-8">
 
                   <div>
-                    <h3 className="text-4xl font-bold text-[#06D001]">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#06D001]">
                       <CountUp from={0} to={2} duration={2} />+
                     </h3>
-                    <p className="text-gray-400 text-sm tracking-wider">
+                    <p className="text-gray-400 text-[10px] sm:text-xs md:text-sm tracking-wider">
                       TAHUN PENGALAMAN
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="text-4xl font-bold text-[#06D001]">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#06D001]">
                       <CountUp from={0} to={15} duration={1.5} />+
                     </h3>
-                    <p className="text-gray-400 text-sm tracking-wider">
+                    <p className="text-gray-400 text-[10px] sm:text-xs md:text-sm tracking-wider">
                       PROYEK SELESAI
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="text-4xl font-bold text-[#06D001]">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#06D001]">
                       <CountUp from={0} to={10} duration={1.5} />+
                     </h3>
-                    <p className="text-gray-400 text-sm tracking-wider">
+                    <p className="text-gray-400 text-[10px] sm:text-xs md:text-sm tracking-wider">
                       CLIENT PUAS
                     </p>
                   </div>
@@ -288,11 +287,11 @@ export default function Home() {
                 </div>
 
                 {/* BUTTONS */}
-                <div className="flex gap-4 mt-10">
+                <div className="flex flex-wrap gap-3 md:gap-4 mt-8 md:mt-10">
 
                   <a
                     href="#projects"
-                    className="px-6 py-3 rounded-full bg-[#06D001] text-black font-semibold transition hover:shadow-[0_0_20px_#06D001]"
+                    className="px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-[#06D001] text-black font-semibold transition hover:shadow-[0_0_20px_#06D001] text-sm sm:text-base"
                   >
                     Lihat Project
                   </a>
@@ -300,7 +299,7 @@ export default function Home() {
                   <a
                     href="https://wa.me/6285194564214"
                     target="_blank"
-                    className="px-6 py-3 rounded-full border border-[#06D001] text-[#06D001] font-semibold transition hover:bg-[#06D001] hover:text-black"
+                    className="px-4 sm:px-6 py-2.5 sm:py-3 rounded-full border border-[#06D001] text-[#06D001] font-semibold transition hover:bg-[#06D001] hover:text-black text-sm sm:text-base"
                   >
                     Contact Me
                   </a>
@@ -317,17 +316,17 @@ export default function Home() {
 
       {/* TOOLS & STACK SECTION */}
 
-      <section className="py-32" id="skills">
-        <div className="container mx-auto px-6 md:px-20">
+      <section className="py-16 md:py-32" id="skills">
+        <div className="container mx-auto px-4 sm:px-6 md:px-20">
 
           <AnimatedContent>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10 md:mb-16">
 
-              <h2 className="text-4xl font-bold text-white">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
                 Tools & Tech Stack
               </h2>
 
-              <p className="text-gray-400 mt-4 max-w-xl mx-auto">
+              <p className="text-gray-400 mt-3 md:mt-4 max-w-xl mx-auto text-sm sm:text-base">
                 Teknologi dan tools yang saya gunakan untuk membangun aplikasi dan solusi digital.
               </p>
 
@@ -335,7 +334,7 @@ export default function Home() {
           </AnimatedContent>
 
           <AnimatedContent>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6">
 
               {/* ICON DARI REACT ICONS */}
 
@@ -442,18 +441,18 @@ export default function Home() {
 
       {/* PROJECTS SECTION */}
 
-      <section className="py-40" id="projects">
+      <section className="py-20 md:py-40" id="projects">
         <AnimatedContent>
-          <div className="max-w-[1400px] mx-auto px-6">
+          <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
 
             <AnimatedContent>
-              <div className="text-center mb-20">
+              <div className="text-center mb-10 md:mb-20">
 
-                <h2 className="text-4xl font-bold text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
                   My <span className="text-[#06D001]">Projects</span>
                 </h2>
 
-                <p className="text-gray-400 mt-4">
+                <p className="text-gray-400 mt-3 md:mt-4 text-sm sm:text-base">
                   Beberapa project yang pernah saya kerjakan.
                 </p>
 
@@ -464,35 +463,13 @@ export default function Home() {
             {/* GRID */}
 
             <AnimatedContent>
-
-              <div
-                className="
-        grid
-        grid-cols-1
-        sm:grid-cols-2
-        md:grid-cols-3
-        lg:grid-cols-4
-        gap-10
-        justify-items-center
-        "
-              >
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-10 justify-items-center">
 
                 {items.map((item, index) => (
-
                   <div
                     key={index}
-                    className="
-            relative
-            w-[320px]
-            h-[240px]
-            flex
-            items-center
-            justify-center
-            overflow-hidden
-            rounded-xl
-            "
+                    className="relative w-full max-w-[320px] h-[200px] sm:h-[220px] md:h-[240px] flex items-center justify-center overflow-hidden rounded-xl"
                   >
-
                     <ChromaGrid
                       items={[item]}
                       radius={260}
@@ -500,13 +477,10 @@ export default function Home() {
                       fadeOut={0.6}
                       ease="power3.out"
                     />
-
                   </div>
-
                 ))}
 
               </div>
-
             </AnimatedContent>
 
           </div>

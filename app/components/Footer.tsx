@@ -35,21 +35,21 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full py-16 border-t border-white/10 bg-black/50 backdrop-blur-md">
+    <footer className="w-full py-10 sm:py-12 md:py-16 border-t border-white/10 bg-black/50 backdrop-blur-md">
 
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12">
 
         {/* GRID */}
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
 
           {/* LEFT SIDE */}
           <div className="space-y-6">
 
-            <h2 className="text-4xl font-bold text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
               Let's <span className="text-[#06D001]">Connect</span>
             </h2>
 
-            <p className="text-gray-400 max-w-md">
+            <p className="text-gray-400 max-w-md text-sm sm:text-base">
               Punya ide menarik atau ingin berkolaborasi? Kirimkan pesan dan
               saya akan membalasnya sesegera mungkin.
             </p>
@@ -150,7 +150,7 @@ const Footer = () => {
 
 
         {/* COPYRIGHT */}
-        <div className="mt-16 pt-6 border-t border-white/5 text-center text-gray-500 text-sm">
+        <div className="mt-10 md:mt-16 pt-6 border-t border-white/5 text-center text-gray-500 text-xs sm:text-sm">
           © {new Date().getFullYear()} M. Fadh Khulloh — Built with Next.js & Tailwind
         </div>
 

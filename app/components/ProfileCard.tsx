@@ -450,7 +450,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
         <section
           className="grid relative overflow-hidden backface-hidden"
           style={{
-            height: '80svh',
+            height: 'clamp(320px, 65svh, 540px)',
             maxHeight: '540px',
             aspectRatio: '0.718',
             borderRadius: cardRadius,
